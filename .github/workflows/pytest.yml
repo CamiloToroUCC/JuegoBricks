@@ -38,7 +38,7 @@ jobs:
           ls -lah tests/
 
       - name: 🔍 Verificar ubicación de los archivos generados
-        run: find $GITHUB_WORKSPACE/tests -type f  
+        run: find $GITHUB_WORKSPACE/tests -type f
 
       - name: 📤 Subir archivos generados al repositorio
         run: |
@@ -59,7 +59,7 @@ jobs:
           EXIT_CODE=$?
           echo "✅ Pruebas ejecutadas, verificando existencia de report.html"
           ls -lah
-          exit $EXIT_CODE  # Devuelve el código de error original de pytest
+          exit $EXIT_CODE
 
       - name: 📤 Subir reporte de pruebas en HTML a GitHub Actions
         uses: actions/upload-artifact@v4
